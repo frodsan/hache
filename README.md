@@ -9,7 +9,7 @@ Usage
 ```ruby
 require "hache"
 
-Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&quot;&#39;"
+Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&quot;&#x27;"
 # => true
 ```
 
