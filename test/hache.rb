@@ -14,5 +14,5 @@ test "not raises an error with nil values" do
 end
 
 test "escapes unsafe characters" do
-  assert_equal "&lt;&gt;&amp;&quot;&#39;", h("<>&\"'")
+  assert_equal "&lt;&gt;&amp;&quot;&#39;", h(%q(<>&"'))
 end
