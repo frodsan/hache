@@ -1,7 +1,7 @@
 hache
 =====
 
-Escapes HTML tag characters (`&`, `<`, `>`, `"`, `'`).
+Escapes HTML tag characters: `&`, `<`, `>`, `"` and `'`.
 
 Usage
 -----
