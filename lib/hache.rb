@@ -8,7 +8,9 @@ module Hache
     "/" => "&#x2F;"
   }
 
+  UNSAFE = /[&"'><\/]/
+
   def self.h(str)
-    str.to_s.gsub(/[&"'><\/]/, HTML_ESCAPE)
+    str.to_s.gsub(UNSAFE, HTML_ESCAPE)
   end
 end
