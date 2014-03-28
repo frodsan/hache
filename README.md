@@ -1,7 +1,7 @@
 hache
 =====
 
-Escapes HTML tag characters: `&`, `<`, `>`, `"` and `'`.
+Escapes HTML tag characters: `&`, `<`, `>`, `"`, `'` and `/`.
 
 Usage
 -----
@@ -9,7 +9,7 @@ Usage
 ```ruby
 require "hache"
 
-Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&quot;&#x27;"
+Hache.h(%q(<>&"'/)) == "&lt;&gt;&amp;&quot;&#x27;&#x2F;"
 # => true
 ```
 
