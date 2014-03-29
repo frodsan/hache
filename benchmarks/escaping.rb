@@ -3,7 +3,7 @@ require "rack/utils"
 require "benchmark/ips"
 
 Benchmark.ips do |x|
-  x.report("encode") { %q(<>&"'/).encode(xml: :text) }
+  x.report("encode") { %q(<>&"'/).encode(xml: :text) } # encode doesn't escape `'`, `"` and `/`.
   x.report("rack")   { Rack::Utils.escape_html(%q(<>&"'/)) }
   x.report("hache")  { Hache.h(%q(<>&"'/)) }
 end
