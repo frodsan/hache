@@ -1,18 +1,20 @@
-require "hache"
-require "rack/utils"
 require "benchmark/ips"
+require "rack/utils"
+require_relative "../lib/hache"
+
+text = %q(some < text > inside & these " escapable' characters/1234)
 
 Benchmark.ips do |x|
-  x.report("encode") { %q(<>&"'/).encode(xml: :text) } # encode doesn't escape `'`, `"` and `/`.
-  x.report("rack")   { Rack::Utils.escape_html(%q(<>&"'/)) }
-  x.report("hache")  { Hache.h(%q(<>&"'/)) }
+  x.report("encode") { text.encode(xml: :text) } # encode doesn't escape `'`, `"` and `/`.
+  x.report("rack")   { Rack::Utils.escape_html(text) }
+  x.report("hache")  { Hache.h(text) }
 end
 
 # Calculating -------------------------------------
-#               encode     17441 i/100ms
-#                 rack      8941 i/100ms
-#                hache     11683 i/100ms
+#               encode     16385 i/100ms
+#                 rack      9626 i/100ms
+#                hache     10211 i/100ms
 # -------------------------------------------------
-#               encode   301703.2 (±4.2%) i/s -    1517367 in   5.038825s
-#                 rack   127113.5 (±3.8%) i/s -     643752 in   5.072152s
-#                hache   147566.0 (±3.7%) i/s -     747712 in   5.074052s
+#               encode   241085.8 (±11.8%) i/s - 1163335 in 5.004123s
+#                 rack   127905.8 (±4.5%)  i/s -  644942 in 5.053418s
+#                hache   153666.9 (±11.5%) i/s -  745403 in 5.056082s
