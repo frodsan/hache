@@ -10,7 +10,7 @@ module Hache
 
   UNSAFE = /[&"'><\/]/
 
-  def self.h(str)
-    str.gsub(UNSAFE, HTML_ESCAPE)
+  def self.h(s)
+    s.to_str.gsub(UNSAFE, HTML_ESCAPE)
   end
 end
