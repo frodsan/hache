@@ -1,6 +1,4 @@
-require "benchmark/ips"
-require "rack/utils"
-require_relative "../lib/hache"
+require_relative "helper"
 
 text = %q(some < text > inside & these " escapable' characters/1234)
 
