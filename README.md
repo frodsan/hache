@@ -1,4 +1,4 @@
-Hache [![Build Status](https://travis-ci.org/frodsan/hache.svg)](https://travis-ci.org/frodsan/hache)
+Hache [![Build Status](https://gitlab.com/frodsan/hache/badges/master/build.svg)](https://gitlab.com/frodsan/hache/builds)
 =====
 
 Escapes HTML tag characters: `&`, `<`, `>`, `"`, `'` and `/`.
@@ -40,7 +40,7 @@ Contributing
 Fork the project with:
 
 ```
-$ git clone git@github.com:frodsan/hache.git
+$ git clone git@gitlab.com:frodsan/hache.git
 ```
 
 To install dependencies, use:
@@ -55,7 +55,7 @@ To run the test suite, do:
 $ rake test
 ```
 
-For bug reports and pull requests use [GitHub][issues].
+For bug reports and pull requests use [GitLab][issues].
 
 License
 -------
@@ -63,4 +63,4 @@ License
 Hache is released under the [MIT License][mit].
 
 [mit]: http://www.opensource.org/licenses/MIT
-[issues]: https://github.com/frodsan/hache/issues
+[issues]: https://gitlab.com/frodsan/hache/issues
