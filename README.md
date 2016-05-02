@@ -1,4 +1,4 @@
-hache
+hache [![Build Status](https://travis-ci.org/frodsan/hache.svg)](https://travis-ci.org/frodsan/hache)
 =====
 
 Escapes HTML tag characters: `&`, `<`, `>`, `"`, `'` and `/`.
