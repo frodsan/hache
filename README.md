@@ -30,7 +30,7 @@ Usage
 ```ruby
 require "hache"
 
-Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&quot;&#x27;"
+Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&#39;&#34;"
 # => true
 ```
 
