@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.summary     = %q(Escapes HTML tag characters: &, <>, ", ', /.)
   s.description = s.summary
   s.author      = "Francesco Rodríguez"
-  s.email       = "hello@frodsan.com"
+  s.email       = "frodsan@protonmail.com"
   s.homepage    = "https://github.com/frodsan/hache"
   s.license     = "MIT"
 
