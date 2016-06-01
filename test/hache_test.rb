@@ -12,6 +12,6 @@ class HacheTest < Minitest::Test
   end
 
   test "escapes unsafe characters" do
-    assert_equal "&lt;&gt;&amp;&quot;&#x27;&#x2F;", Hache.h(%q(<>&"'/))
+    assert_equal "&lt;&gt;&amp;&quot;&#x27;", Hache.h(%q(<>&"'))
   end
 end

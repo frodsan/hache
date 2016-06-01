@@ -6,11 +6,10 @@ module Hache
     ">" => "&gt;",
     "<" => "&lt;",
     '"' => "&quot;",
-    "'" => "&#x27;",
-    "/" => "&#x2F;"
+    "'" => "&#x27;"
   }.freeze
 
-  UNSAFE = /[&"'><\/]/
+  UNSAFE = /[&"'><]/
 
   def self.h(s)
     s.to_str.gsub(UNSAFE, HTML_ESCAPE)

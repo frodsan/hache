@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = "hache"
   s.version     = "1.1.2"
-  s.summary     = %q(Escapes HTML tag characters: &, <>, ", ', /.)
+  s.summary     = %q(Escapes HTML tag characters: &, <, >, ", ')
   s.description = s.summary
   s.author      = "Francesco Rodríguez"
   s.email       = "frodsan@protonmail.com"

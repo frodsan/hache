@@ -1,3 +1,8 @@
+1.2.0 (01-06-2016)
+-----
+
+- Remove `/` from unsafe characters list.
+
 1.1.2 (02-05-2016)
 -----
 

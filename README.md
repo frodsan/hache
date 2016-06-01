@@ -1,7 +1,7 @@
 hache [![Build Status](https://travis-ci.org/frodsan/hache.svg)](https://travis-ci.org/frodsan/hache)
 =====
 
-Escapes HTML tag characters: `&`, `<`, `>`, `"`, `'` and `/`.
+Escapes HTML tag characters: `&`, `<`, `>`, `"` and `'`.
 
 Installation
 ------------
@@ -30,7 +30,7 @@ Usage
 ```ruby
 require "hache"
 
-Hache.h(%q(<>&"'/)) == "&lt;&gt;&amp;&quot;&#x27;&#x2F;"
+Hache.h(%q(<>&"')) == "&lt;&gt;&amp;&quot;&#x27;"
 # => true
 ```
 
