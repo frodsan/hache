@@ -3,15 +3,14 @@
 require "bundler/setup"
 require "minitest/autorun"
 require "minitest/pride"
-require "minitest/sugar"
 require_relative "../lib/hache"
 
 class HacheTest < Minitest::Test
-  test "not escapes safe string" do
+  def test_escape_safe_string
     assert_equal "hola", Hache.h("hola")
   end
 
-  test "escapes unsafe characters" do
+  def test_escape_unsafe_chars
     assert_equal "&lt;&gt;&amp;&#34;&#39;", Hache.h(%q(<>&"'))
   end
 end
